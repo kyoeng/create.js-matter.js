@@ -304,6 +304,9 @@
                 const nowCjs = cjs_balls[cjs_balls.length - 1];
                 nowCjs.graphics.f(color[idx]).dc(0, 0, 20);
             }
+
+            console.log(balls);
+            console.log(cjs_balls);
         }
 
         if (
