@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create-Matter Linked Reference</title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+		<script src="lib/matter.min.js"></script>
+		<script src="lib/matter-wrap.min.js"></script>
+		<script defer src="./index.js"></script>
+    </head>
+
+    <body>
+        <div></div>
+
+        <header>
+            <div id="h_container" class="container">
+                <h1 id="title">
+                    Create.js + Matter.js
+                </h1>
+
+                <div id="logo">
+                    <svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
+                        <polygon style="fill:#76f09b" points="10, 7.5, 10, 42.5, 45, 7.5"></polygon>
+                        <polygon style="fill:#f5b862" points="57.5, 7.5, 57.5, 42.5, 92.5, 42.5, 92.5, 7.5"></polygon>
+                        <circle style="fill:#f55f5f" r="8" cx="38" cy="35.5"></circle>
+                    </svg>
+                </div>
+
+                <select name="menu" id="menu">
+                    <option value="airFriction" selected>Air Friction</option>
+                    <option value="avalanche">Avalanche</option>
+                    <option value="bridge">Bridge</option>
+                    <option value="car">Car</option>
+                    <option value="catapult">Catapult</option>
+                    <option value="curtain">Curtain</option>
+                    <option value="slingAndCollision">Sling And Collision</option>
+                </select>
+            </div>
+        </header>
+
+
+        <main>
+            <div id="m_container" class="container">
+                <div id="title_box">
+                    <h2 id="section_title">Air Friction</h2>
+                    <div id="restart">
+                        <div id="restart_btn"></div>
+                    </div>
+                    <div id="sw">show<br>matter.js screen</div>
+                </div>
+
+                <div id="canvas_box">
+                    <canvas id="canvas"></canvas>
+                </div>
+
+                <div id="section_box">
+                    <h3 id="code_title">Source Code</h3>
+                    <img id="code_img" src="./imgs/code/airFriction.png">
+                </div>
+            </div>
+        </main>
+
+        <div id="ref_container" class="container">
+            <!-- image, icon 등 출처 표기를 위한 공간 -->
+            <h3 id="ref_title">이미지 출처</h3>
+
+            <div id="static_ref">
+                <a href="https://www.flaticon.com/free-icons/cloud-computing" title="cloud computing icons">Cloud computing icons created by Freepik - Flaticon</a>
+            </div>
+
+            <div id="ref_tags">
+                <a href="https://www.flaticon.com/free-icons/wooden-box" title="wooden box icons">Wooden box icons created by kerismaker - Flaticon</a>
+            </div>
+        </div>
+
+        <footer>
+            <div id="f_container" class="container">
+                <div id="instructions_box">
+                    <p>This site is not created for commercial purposes.</p>
+                    <p>이 사이트는 상업적 목적으로 만든 사이트가 아닙니다.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
