@@ -307,7 +307,7 @@
         }
 
         if (
-            e.body === balls[balls.length - 1] && 
+            e.body === sling.bodyB && 
             (e.mouse.position.x < 150 || e.mouse.position.y > 650)
         ) {
             firing = true;
@@ -352,8 +352,8 @@
                         .dc(0, 0, 20)
                 )
             );
-            cjs_balls[cjs_balls.length - 1].x = balls[balls.length - 1].position.x;
-            cjs_balls[cjs_balls.length - 1].y = balls[balls.length - 1].position.y;
+            cjs_balls[cjs_balls.length - 1].x = sling.bodyB.position.x;
+            cjs_balls[cjs_balls.length - 1].y = sling.bodyB.position.y;
             mcRoot.addChild(cjs_balls[cjs_balls.length - 1]);
 
             firing = false;

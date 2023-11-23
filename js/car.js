@@ -27,7 +27,6 @@
 
     // matter.js 정적 요소 생성
     const stairCount = Math.floor((render.bounds.max.y - render.bounds.min.y) / 110);
-    console.log(stairCount);
 
     const stack = Composites.stack(0, 600, stairCount + 2, 1, 0, 0, function(x, y, column) {
         return Bodies.rectangle(x - 80, y + column * 14, 200, 1000, {
