@@ -2,6 +2,20 @@
 (function() {
     // # create.js의 기본적인 설정은 되어 있는 상태 
     // # stage, mcRoot(최상단 MovieClip) 
+    const Engine = Matter.Engine,  
+        World = Matter.World,
+        Render = Matter.Render,   
+        Runner = Matter.Runner,                     
+        MouseConstraint = Matter.MouseConstraint,
+        Mouse = Matter.Mouse,
+        Composite = Matter.Composite,
+        Composites = Matter.Composites,
+        Common = Matter.Common,
+        Bodies = Matter.Bodies,
+        Body = Matter.Body,
+        Constraint = Matter.Constraint,
+        Events = Matter.Events,
+        Vector = Matter.Vector;
 
     // ------------------- matter.js setting -------------------
     const engine = Engine.create();
@@ -52,7 +66,7 @@
     const color = ["#F15F5F", "#FFE400", "#6B9900"];
 
     for (let i = 0; i < floors.length; i++) {
-        stacks[i] = Composites.stack(1000, floors[i].position.y - 150, 5, 3, 0, 0, function(x, y) {
+        stacks[i] = Composites.stack(1000, floors[i].position.y - 135, 5, 3, 0, 0, function(x, y) {
             return Bodies.rectangle(x, y, 40, 40, {
                 collisionFilter: {
                     category: categories[i]
@@ -304,9 +318,6 @@
                 const nowCjs = cjs_balls[cjs_balls.length - 1];
                 nowCjs.graphics.f(color[idx]).dc(0, 0, 20);
             }
-
-            console.log(balls);
-            console.log(cjs_balls);
         }
 
         if (

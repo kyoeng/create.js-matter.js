@@ -3,6 +3,21 @@
     // # create.js의 기본적인 설정은 되어 있는 상태 
     // # stage, mcRoot(최상단 MovieClip) 
 
+    const Engine = Matter.Engine,  
+        World = Matter.World,
+        Render = Matter.Render,   
+        Runner = Matter.Runner,                     
+        MouseConstraint = Matter.MouseConstraint,
+        Mouse = Matter.Mouse,
+        Composite = Matter.Composite,
+        Composites = Matter.Composites,
+        Common = Matter.Common,
+        Bodies = Matter.Bodies,
+        Body = Matter.Body,
+        Constraint = Matter.Constraint,
+        Events = Matter.Events,
+        Vector = Matter.Vector;
+
     // ------------------- matter.js setting -------------------
     const engine = Engine.create();
     const world = engine.world;

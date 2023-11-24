@@ -1,23 +1,5 @@
-// 자주 사용할 객체 전역에 선언
-var Engine = Matter.Engine,  
-    World = Matter.World,
-    Render = Matter.Render,   
-    Runner = Matter.Runner,                     
-    MouseConstraint = Matter.MouseConstraint,
-    Mouse = Matter.Mouse,
-    Composite = Matter.Composite,
-    Composites = Matter.Composites,
-    Common = Matter.Common,
-    Bodies = Matter.Bodies,
-    Body = Matter.Body,
-    Constraint = Matter.Constraint,
-    Events = Matter.Events,
-    Vector = Matter.Vector,
-    cjs = createjs;
-
-
-
 // --- create.js setting ---
+var cjs = createjs;
 var canvas = document.getElementById("canvas");
 var stage = new cjs.Stage("canvas");
 var mcRoot = new cjs.MovieClip();
