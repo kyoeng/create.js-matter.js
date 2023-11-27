@@ -1,3 +1,25 @@
+var Engine = Matter.Engine,  
+    World = Matter.World,
+    Render = Matter.Render,   
+    Runner = Matter.Runner,                     
+    MouseConstraint = Matter.MouseConstraint,
+    Mouse = Matter.Mouse,
+    Composite = Matter.Composite,
+    Composites = Matter.Composites,
+    Common = Matter.Common,
+    Bodies = Matter.Bodies,
+    Body = Matter.Body,
+    Constraint = Matter.Constraint,
+    Events = Matter.Events,
+    Vector = Matter.Vector;
+
+
+var engine,
+    world,
+    runner,
+    render;
+
+
 // --- create.js setting ---
 var cjs = createjs;
 var canvas = document.getElementById("canvas");
@@ -100,6 +122,16 @@ re_btn.addEventListener("click", refresh);
  * @param {HTMLElement} e 
  */
 function refresh() {
+    // 엔진 중지
+    World.clear(world);
+    Engine.clear(engine);
+    Render.stop(render);
+    Runner.stop(runner);
+    render.canvas = null;
+    render.context = null;
+    render.engine = null;
+
+
     // 전체 삭제 후 배경 삽입
     stage.removeAllChildren();
     mcRoot.removeAllChildren();
@@ -156,11 +188,9 @@ function refChange(value) {
         ref_container.style.display = 'flex';
         ref_tags.innerHTML += '<a href="https://www.flaticon.com/free-icons/window" title="window icons">Window icons created by Freepik - Flaticon</a>';
         
-    } else if (value === "slingAndCollision") {
+    } else if (value === "collisionFilter") {
         ref_container.style.display = 'flex';
-        ref_tags.innerHTML += '<a href="https://www.flaticon.com/free-icons/kid-and-baby" title="kid and baby icons">Kid and baby icons created by Good Ware - Flaticon</a>';
+        ref_tags.innerHTML += '<a href="https://www.flaticon.com/free-icons/basketball" title="basketball icons">Basketball icons created by Ahmad Yafie - Flaticon</a>';
 
     }
 }
-
-
